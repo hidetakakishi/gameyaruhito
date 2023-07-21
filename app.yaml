@@ -1,0 +1,29 @@
+runtime: php74
+
+# この記載がないとcssとjsがnot foundになるので必須
+handlers:
+# Serve a directory as a static resource.
+- url: /css
+  static_dir: public/css
+- url: /js
+  static_dir: public/js
+- url: /image
+  static_dir: public/image
+
+
+
+env_variables:
+  ## Put production environment variables here.
+  APP_KEY: base64:urMzwNX05BHjweBVq0Uu4u0uj90MT1/NPTILp74xk8Y=  ## .envのAPP_KEYを記載　ex) base64:Ts6Uz7mj0x~~~
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+    ## Set these environment variables according to your CloudSQL configuration.
+  DB_DATABASE: chat #クラウドのデータベース名
+  DB_USERNAME: root #クラウドのユーザー名
+  DB_PASSWORD: Pa65416541 #クラウドのユーザーのパスワード
+  ## for MYSQL, use DB_SOCKET:
+  DB_SOCKET: "/cloudsql/chat-project-363213:asia-northeast1:mysql1" #YOUR_CONNECTION_NAMEにはメモっていたものを記載
+  ## for PostgreSQL, use DB_HOST:
+  # DB_HOST: "/cloudsql/YOUR_CONNECTION_NAME"　#Postgresqlの場合はこのように記載
