@@ -20,10 +20,10 @@ class CreateCommentsTable extends Migration
             $table->tinyInteger('delete_flag')->unsigned()->default(0);
 
             //外部キー制約
-            $table->foreign('chat_user_id')
-                ->references('id')
-                ->on('chat_user')
-                ->onDelete('set null');
+            // $table->foreign('chat_user_id')
+            //     ->references('id')
+            //     ->on('chat_user')
+            //     ->onDelete('set null');
 
             $table->timestamps();
         });

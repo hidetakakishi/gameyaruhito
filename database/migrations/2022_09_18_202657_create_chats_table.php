@@ -27,10 +27,10 @@ class CreateChatsTable extends Migration
             $table->string('unique_key');
 
             //外部キー制約
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('set null');
+            // $table->foreign('user_id')
+            //     ->references('id')
+            //     ->on('users')
+            //     ->onDelete('set null');
 
             $table->timestamps();
         });

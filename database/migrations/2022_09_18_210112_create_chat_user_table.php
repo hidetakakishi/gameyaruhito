@@ -20,14 +20,14 @@ class CreateChatUserTable extends Migration
             $table->tinyInteger('delete_flag')->unsigned()->default(0);
 
             //外部キー制約
-            $table->foreign('chat_id')
-                ->references('id')
-                ->on('chats')
-                ->onDelete('set null');
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('set null');
+            // $table->foreign('chat_id')
+            //     ->references('id')
+            //     ->on('chats')
+            //     ->onDelete('set null');
+            // $table->foreign('user_id')
+            //     ->references('id')
+            //     ->on('users')
+            //     ->onDelete('set null');
 
             $table->timestamps();
 
