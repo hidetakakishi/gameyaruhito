@@ -17,6 +17,7 @@ class Chat extends Model
     protected $fillable = [
         'title',
         'detail',
+        'image',
         'capacity',
         'followers_only_flag',
         'mutual_followers_only_flag',

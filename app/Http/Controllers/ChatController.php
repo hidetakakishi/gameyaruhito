@@ -218,6 +218,7 @@ class ChatController extends Controller
         $chat = Chat::create([
             'title' => $title,
             'detail' => '',
+            'image' => '',
             'capacity' => $capacity,
             'followers_only_flag' => $followersOnly,
             'mutual_followers_only_flag' => $mutualFollowersOnly,
